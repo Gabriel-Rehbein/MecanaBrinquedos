@@ -1,0 +1,735 @@
+h2, h3 {
+    font-family: 'Arial', sans-serif;
+}
+
+h1 {
+    font-family: 'Arial', sans-serif;
+    color: #b4b1b1;
+}
+.banner {
+    background-image: url('Imagens/mecanimais.png'); /* Caminho para a imagem 'mecanimais.png' */
+    border-radius: 8px;
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Altura do banner, ajuste conforme necessário */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px; /* Espaço abaixo do banner */
+}
+
+.banner-content {
+    font-family: 'Arial', sans-serif;
+    color: #b4b1b1;
+    max-width: 800px; /* Largura máxima do conteúdo do banner */
+    padding: 20px;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo semi-transparente para destacar o texto */
+}
+
+.banner h2 {
+    font-size: 2.5em; /* Tamanho da fonte do título */
+    margin-bottom: 10px;
+}
+
+.banner p {
+    font-size: 1.2em; /* Tamanho da fonte do parágrafo */
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #efefef;
+    margin-bottom: 15px; /* Adicionar margem inferior aos parágrafos */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f4; /* Fundo mais claro */
+    color: #333; /* Cor de texto mais escura */
+    line-height: 1.6;
+    line-height: 1.8; /* Aumentar o espaçamento entre linhas */
+    letter-spacing: 0.5px; /* Aumentar o espaçamento entre letras */
+}
+
+
+/* Header */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center; /* Centralizar texto */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+
+
+.logo {
+    font-size: 1.5rem; /* Tamanho maior para o logo */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 20px;
+}
+
+
+.logo-img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px; /* Espaçamento entre logo e texto */
+}
+
+/* Button */
+#login-btn,
+#signup-btn {
+    transition: transform 0.5s;
+    width: 110px;
+    height: 40px;
+    font-size: 20px;
+    color: #cabdb4;
+    border-color: #2f4e52;
+    align-items: flex-start;
+    border: none;
+    font-family: Arial, sans-serif;
+    line-height: 1;
+    outline: none;
+    padding: 10;
+    user-select: none;
+    vertical-align: middle;
+    transition: background-color 0.3s ease;
+    color: #fff; /* Mude a cor do texto para branco */
+    background-color: #283f57; /* Adicione uma cor de fundo */
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+
+#login-btn:hover,
+#signup-btn:hover {
+    background-color: #0056b3;
+    background-color: #0056b3;
+    transform: scale(0.95);
+    background-color: #0056b3; /* Cor de fundo do botão ao passar o mouse */ /* Cor de fundo do botão ao passar o mouse */
+}
+
+
+/* Navigation */
+.sugestoes-pesquisa {
+
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+.search-bar input:focus + .sugestoes-pesquisa {
+    display: block;
+}
+
+.sugestoes-pesquisa ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sugestoes-pesquisa li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.sugestoes-pesquisa li:last-child {
+    border-bottom: none;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+
+nav ul li a:hover {
+    color: #fff; /* Altera a cor do texto ao passar o mouse */
+    background-color: #ff7700; /* Cor de fundo ao passar o mouse */
+}
+
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Search Bar */
+.search-bar {
+    text-align: center;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #3e3e3e;
+    color: #fff;
+    padding: 12px auto; /* Aumenta o padding para tornar o botão mais clicável */
+    margin-top: 20px; /* Adicionar um espaçamento superior */
+    margin: 10px;
+
+}
+
+
+.suggestions {
+    position: absolute;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+    background-color: #414040;
+    z-index: 1000;
+    width: 100%;
+    display: none;
+}
+
+.suggestions ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.suggestions ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.suggestions ul li:last-child {
+    border-bottom: none;
+}
+
+.suggestions ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.suggestions ul li a:hover {
+    background-color: #6b5454;
+}
+
+.show {
+    display: block;
+}
+
+
+.search-bar input,
+.search-bar select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    margin-right: 10px; /* Espaçamento entre o input e o botão */
+}
+
+.search-bar button {
+    padding: 10px 20px;
+    background-color: #6802bb;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-bar button:hover {
+    background-color: #5500a3; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Product Grid */
+
+.produtos {
+    display: flex;
+    width: 100%;
+    right: auto;
+    gap: 10px;
+    margin: 20px auto; /* Centralizar e adicionar espaçamento superior e inferior */
+    animation: fadeInUp 0.5s ease-in-out;
+}
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.produto {
+    padding: 15px; /* Reduzir padding para melhor ajuste */
+    background-color: #ffffff;
+    border: 1.5px solid #000000;
+    border-radius: 8px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    
+}
+
+
+
+.produto:hover {
+    transform: translateY(-10px); /* Aumentar o efeito de hover */
+    transition: transform 0.3s ease-in-out;
+}
+
+.produto img {
+    width: 100%;
+    height: auto;
+    max-height: 200px; /* Adicionar altura máxima para consistência */
+}
+
+
+.produto h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#back-to-top {
+    display: none; /* Esconder por padrão */
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: opacity 0.3s;
+}
+
+#back-to-top.show {
+    display: block;
+    opacity: 0.7;
+}
+
+#back-to-top:hover {
+    opacity: 1;
+}
+
+/* Carrinho de Compras */
+.carrinho-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.carrinho-aberto {
+    transform: translateX(0);
+}
+
+.carrinho-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #ff9900;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.item-carrinho {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.item-carrinho img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.item-carrinho p {
+    margin: 0;
+}
+
+.item-carrinho img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.item-carrinho p {
+    font-size: 1rem;
+    color: #ac0707;
+}
+
+.carrinho-toggle {
+    background-color: #007bff;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Garante que fique acima de outros conteúdos */
+}
+
+.toggle-icon {
+    font-size: 1.5rem;
+}
+
+:root {
+    --bg-color: #fff;
+    --text-color: #333;
+}
+
+[data-theme='dark'] {
+    --bg-color: #333;
+    --text-color: #fff;
+}
+
+/* Page Styles */
+.sobre-nos,
+.suporte-ajuda,
+.faq,
+.politica-devolucao,
+.rastrear-pedido {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+
+.sobre-nos h2,
+.suporte-ajuda h2,
+.faq h2,
+.politica-devolucao h2,
+.rastrear-pedido h2 {
+    font-size: 1.75rem;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.sobre-nos p,
+.suporte-ajuda p,
+.faq p,
+.politica-devolucao p,
+.rastrear-pedido p {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #666;
+}
+
+.sobre-nos ul,
+.suporte-ajuda ul,
+.faq ul,
+.politica-devolucao ul {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.sobre-nos ul li,
+.suporte-ajuda ul li,
+.faq ul li,
+.politica-devolucao ul li {
+    font-size: 1.125rem;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.sobre-nos img,
+.suporte-ajuda img,
+.faq img,
+.politica-devolucao img,
+.rastrear-pedido img {
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.suporte-ajuda a,
+.faq a {
+    color: #ee5316;
+    text-decoration: none;
+}
+
+.suporte-ajuda a:hover,
+.faq a:hover {
+    text-decoration: underline;
+}
+
+.rastrear-pedido form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rastrear-pedido label {
+    font-size: 1.125rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+.rastrear-pedido input {
+    padding: 10px 15px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 10px;
+}
+
+.rastrear-pedido button {
+    background-color: #0056b3;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.rastrear-pedido button:hover {
+    background-color: #0041a3;
+}
+.redes-sociais {
+    color: rgb(80, 80, 80);
+    padding: 50px 0;
+    text-align: center;
+    
+}
+
+
+.redes-sociais h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.social-icons a {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-5px); /* Efeito de levantar ao passar o mouse */
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+    margin: 0 15px;
+}
+
+.social-icons p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+    }
+    
+    .logo {
+        font-size: 1.5rem;
+        margin-right: 10px;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 20px;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #444;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    
+
+    .search-bar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    
+
+    .search-bar input,
+    .search-bar select,
+    .search-bar button {
+        width: 100%;
+        margin: 5px 0;
+        padding: 15px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra leve */
+
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .carrinho-container {
+        top: 10px;
+        right: 10px;
+    }
+
+    .carrinho {
+        width: 150px;
+        padding: 5px;
+    }
+
+    .carrinho h2 {
+        font-size: 1rem;
+    }
+
+    .item-carrinho p {
+        font-size: 0.875rem;
+    }
+
+    .carrinho-toggle {
+        width: 30px;
+        height: 30px;
+    }
+
+    .toggle-icon {
+        font-size: 1.25rem;
+    }
+
+    .sobre-nos,
+    .suporte-ajuda,
+    .faq,
+    .politica-devolucao,
+    .rastrear-pedido {
+        padding: 10px;
+    }
+
+    .redes-sociais {
+        padding: 20px 0;
+    }
+
+    .social-icons a {
+        margin: 0 10px;
+    }
+    
+}
+
